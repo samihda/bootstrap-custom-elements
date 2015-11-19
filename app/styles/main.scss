@@ -1,0 +1,8 @@
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+
+bootstrap-jumbotron {
+	@extend .jumbotron;
+	
+	/* override custom element default (display:inline) */
+	display: block;
+}
