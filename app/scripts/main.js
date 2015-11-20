@@ -1,11 +1,14 @@
-var custom = {};
-
-custom.JumbotronProto = Object.create(HTMLElement.prototype);
-custom.Jumbotron = document.registerElement('bootstrap-jumbotron', {
-	prototype: custom.JumbotronProto
-});
+var bootstrap = (function() {
+	var Jumbotron = document.registerElement('bootstrap-jumbotron', {
+		prototype: Object.create(HTMLElement.prototype)
+	});
+	
+	return {
+		Jumbotron: Jumbotron
+	};
+})();
 
 // create a new element
-custom.jumbotron = new custom.Jumbotron;
-custom.jumbotron.innerHTML = '<h1>I\'m custom too!</h1>';
-document.getElementsByClassName('container')[0].appendChild(custom.jumbotron);
+// var custom = new bootstrap.Jumbotron();
+// custom.innerHTML = '<h1>I\'m custom too!</h1>';
+// document.getElementsByClassName('container')[0].appendChild(custom);
